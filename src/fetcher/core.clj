@@ -44,7 +44,7 @@
     resp))
 
 (defn fetch-pool
-  [fetch get-work put-done]
+  [get-work put-done]
   (work/queue-work
    fetch
    get-work
