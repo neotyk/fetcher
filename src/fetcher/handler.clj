@@ -67,7 +67,7 @@
   (fn [feed-key feed-url status-code headers body]
     (let [code (-> status-code str keyword)
           handler (handlers code)]
-	  (handler feed-key feed-url headers body))))
+	  (cons code (handler feed-key feed-url headers body)))))
 
 (defn format-last-modified
   [date]
