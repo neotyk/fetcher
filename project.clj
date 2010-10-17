@@ -2,7 +2,7 @@
   :description "work based fetcher service."
   :dependencies [[org.clojure/clojure "1.2.0"]
                  [org.clojure/clojure-contrib "1.2.0"]
-                 [http.async.client "0.2.0"]
+		 [http.async.client "0.2.0"]
                  [javax.mail/mail "1.4.3"]
                  [work "0.0.1-SNAPSHOT"]
                  [crane "1.0-SNAPSHOT"]

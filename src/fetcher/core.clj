@@ -31,10 +31,10 @@
   "fetch a feed for updates.  Responses are handled asynchronously by the provided callback.
 
   The callback should accept five arguments: k, u, response code, headers, and body."
-  [response-callback [k u & headers]]
+  [[k u & headers] put-done]
   (let [callbacks (merge async-req/*default-callbacks*
                          {:status status-check
-                          :completed (dispatch-generator k u response-callback)})
+                          :completed (dispatch-generator k u put-done)})
         req (async-req/prepare-request :get
 			     u
 			     :headers headers)
